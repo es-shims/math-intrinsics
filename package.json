@@ -1,6 +1,6 @@
 {
 	"name": "math-intrinsics",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "ES Math-related intrinsics and helpers, robustly cached.",
 	"main": false,
 	"exports": {
