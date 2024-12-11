@@ -13,11 +13,13 @@ var isNaN = require('../isNaN');
 var isNegativeZero = require('../isNegativeZero');
 var max = require('../max');
 var min = require('../min');
+var mod = require('../mod');
 var pow = require('../pow');
 var sign = require('../sign');
 
-var maxValue = require('../constants/maxValue');
+var maxArrayLength = require('../constants/maxArrayLength');
 var maxSafeInteger = require('../constants/maxSafeInteger');
+var maxValue = require('../constants/maxValue');
 
 test('abs', function (t) {
 	t.equal(abs(-1), 1, 'abs(-1) === 1');
@@ -128,6 +130,22 @@ test('min', function (t) {
 	t.end();
 });
 
+test('mod', function (t) {
+	t.equal(mod(1, 2), 1, 'mod(1, 2) === 1');
+	t.equal(mod(2, 2), 0, 'mod(2, 2) === 0');
+	t.equal(mod(3, 2), 1, 'mod(3, 2) === 1');
+	t.equal(mod(4, 2), 0, 'mod(4, 2) === 0');
+	t.equal(mod(5, 2), 1, 'mod(5, 2) === 1');
+	t.equal(mod(6, 2), 0, 'mod(6, 2) === 0');
+	t.equal(mod(7, 2), 1, 'mod(7, 2) === 1');
+	t.equal(mod(8, 2), 0, 'mod(8, 2) === 0');
+	t.equal(mod(9, 2), 1, 'mod(9, 2) === 1');
+	t.equal(mod(10, 2), 0, 'mod(10, 2) === 0');
+	t.equal(mod(11, 2), 1, 'mod(11, 2) === 1');
+
+	t.end();
+});
+
 test('pow', function (t) {
 	t.equal(pow(2, 2), 4, 'pow(2, 2) === 4');
 	t.equal(pow(2, 3), 8, 'pow(2, 3) === 8');
@@ -152,6 +170,14 @@ test('sign', function (t) {
 	t.equal(sign(-Infinity), -1, 'sign(-Infinity) === -1');
 	t.equal(sign(maxValue), +1, 'sign(maxValue) === +1');
 	t.equal(sign(maxSafeInteger), +1, 'sign(maxSafeInteger) === +1');
+
+	t.end();
+});
+
+test('constants', function (t) {
+	t.equal(typeof maxArrayLength, 'number', 'typeof maxArrayLength === "number"');
+	t.equal(typeof maxSafeInteger, 'number', 'typeof maxSafeInteger === "number"');
+	t.equal(typeof maxValue, 'number', 'typeof maxValue === "number"');
 
 	t.end();
 });

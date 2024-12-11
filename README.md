@@ -17,9 +17,11 @@ ES Math-related intrinsics and helpers, robustly cached.
  - `isNegativeZero`
  - `max`
  - `min`
+ - `mod`
  - `pow`
  - `sign`
- - `constants/maxsafeInteger`
+ - `constants/maxArrayLength`
+ - `constants/maxSafeInteger`
  - `constants/maxValue`
 
 
