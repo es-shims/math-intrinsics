@@ -15,6 +15,7 @@
 		"./mod": "./mod.js",
 		"./pow": "./pow.js",
 		"./sign": "./sign.js",
+		"./round": "./round.js",
 		"./constants/maxArrayLength": "./constants/maxArrayLength.js",
 		"./constants/maxSafeInteger": "./constants/maxSafeInteger.js",
 		"./constants/maxValue": "./constants/maxValue.js",
